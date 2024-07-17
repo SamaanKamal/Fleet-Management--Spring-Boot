@@ -11,10 +11,10 @@ public class Bus {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "registration_number")
+    @Column(name = "registration_number",nullable = false)
     private String registrationNumber;
 
-    @Column(name = "capacity")
+    @Column(name = "capacity",nullable = false)
     private int capacity;
 
     public Bus() {
