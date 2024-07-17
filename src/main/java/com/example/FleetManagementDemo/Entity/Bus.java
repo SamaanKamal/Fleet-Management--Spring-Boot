@@ -25,7 +25,7 @@ public class Bus {
         this.capacity = capacity;
     }
 
-    public Long getId() {g
+    public Long getId() {
         return id;
     }
 
