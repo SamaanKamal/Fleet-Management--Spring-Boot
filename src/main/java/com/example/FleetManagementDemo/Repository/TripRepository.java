@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface TripRepository extends JpaRepository<TripRepository,Long> {
+public interface TripRepository extends JpaRepository<Trip,Long> {
     List<Trip> findByStartCityIdAndEndCityId(Long startCityId, Long endCityId);
 }
