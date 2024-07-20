@@ -11,7 +11,7 @@ public interface ITripService {
 
     Trip createTrip(TripRequest tripRequest);
 
-
+    List<Trip> getAllTrips();
     Trip getTripDetails(Long id);
 
     List<Trip> findTripsByOriginAndDestination(Long originId, Long destinationId);
