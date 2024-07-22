@@ -2,7 +2,7 @@ package com.example.FleetManagementDemo.Service.SeatService;
 
 import com.example.FleetManagementDemo.Entity.Bus;
 import com.example.FleetManagementDemo.Entity.Seat;
-import com.example.FleetManagementDemo.Repository.BusRepository;
+
 import com.example.FleetManagementDemo.Repository.SeatRepository;
 import com.example.FleetManagementDemo.Service.BusService.BusService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class SeatService implements ISeatService{
     @Override
     public List<Seat> getAvailableSeatsByBusId(Long busId) {
         Bus bus = busService.getBus(busId);
-        return seatRepository.getAllSeatsByBusId(bus.getId());
+        return seatRepository.findByBusId(bus.getId());
     }
 
     @Override
