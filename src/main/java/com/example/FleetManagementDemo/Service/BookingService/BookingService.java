@@ -125,7 +125,7 @@ public class BookingService implements IBookingService{
         for (int i = startOrder; i < endOrder; i++) {
             Stop currentStop = stops.get(i);
             Stop nextStop = stops.get(i + 1);
-            if (seatRepository.isSeatBookedBetweenStops(seat.getId(), currentStop.getCity().getId(), nextStop.getCity().getId())) {
+            if (seatRepository.isSeatBookedBetweenStops(seat.getSeatNumber(), currentStop.getCity().getId(), nextStop.getCity().getId())) {
                 return false;
             }
         }
